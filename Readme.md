@@ -153,6 +153,8 @@ Which gives the final expression for time cost during queries and adding items:
 
 *O( log(n)^2 + log(n) * log(p) )*
 
+While good in the sense that the scalable bloom filter can theoretically provide unlimited capacity whilst keeping the FPR below a prescribed level, the time cost to insert and query items can grow (since it scales like *log (n)*). Therefore, it is best to estimate the initial capacity of the scalable bloom filter as accurately as possible, in order to avoid time cost of item insertion and querying to grow too large.
+
 # References
 1. https://en.wikipedia.org/wiki/Bloom_filter
 2. http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf
